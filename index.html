@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Galeria</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{margin:0;background:#0b0b0b;color:#fff;font-family:Arial}
+header{padding:14px;background:#111;font-size:18px}
+#pastas{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;padding:12px}
+.pasta{
+  background:#1a1a1a;
+  border-radius:8px;
+  padding:30px 20px;
+  text-align:center;
+  cursor:pointer;
+  transition:.2s;
+}
+.pasta:hover{background:#2a2a2a}
+.pasta span{font-size:40px;display:block}
+</style>
+</head>
+
+<body>
+
+<header>📁 Galeria</header>
+
+<div id="pastas">
+  <div class="pasta" onclick="abrir('fotos')">
+    <span>🖼️</span>
+    Fotos
+  </div>
+  <div class="pasta" onclick="abrir('videos')">
+    <span>🎥</span>
+    Vídeos
+  </div>
+  <div class="pasta" onclick="abrir('raw')">
+    <span>📷</span>
+    RAW
+  </div>
+</div>
+
+<script>
+function abrir(pasta){
+  window.location.href = pasta + ".html";
+}
+</script>
+
+</body>
+</html>
